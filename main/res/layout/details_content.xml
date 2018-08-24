@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+		xmlns:app = "http://schemas.android.com/apk/res-auto"
+		xmlns:tools = "http://schemas.android.com/tools"
+		android:id = "@+id/layout_cont"
+		style = "@style/Theme.MaterialComponents"
+		android:layout_width = "match_parent"
+		android:layout_height = "match_parent"
+		tools:showIn = "@layout/activity_details"  >
+
+	<ImageView
+				android:id = "@+id/image_view"
+				android:layout_width = "match_parent"
+				android:layout_height = "300dp"
+				android:background = "?attr/selectableItemBackgroundBorderless"
+				android:contentDescription = "@null"
+				android:scaleType = "fitXY"
+				tools:src = "@drawable/backdrop_test"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+	<android.support.design.widget.FloatingActionButton
+				style="@style/Widget.MaterialComponents.FloatingActionButton"
+				android:id = "@+id/fab_add"
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:layout_marginEnd="16dp"
+				android:src = "@drawable/ic_twotone_share_24px"
+				app:fabSize = "normal"
+				app:layout_constraintBottom_toBottomOf = "@+id/image_view"
+				app:layout_constraintEnd_toEndOf = "parent"
+				app:layout_constraintHorizontal_bias = "0.84"
+				app:layout_constraintStart_toEndOf = "@+id/title_tv"
+				app:layout_constraintTop_toBottomOf = "@+id/image_view" />
+
+	<TextView
+		android:id = "@+id/title_tv"
+		android:layout_width = "0dp"
+		android:layout_height = "wrap_content"
+		android:layout_marginStart = "8dp"
+		android:layout_marginTop = "8dp"
+		android:layout_marginEnd = "8dp"
+		android:elegantTextHeight = "true"
+		android:ellipsize = "marquee"
+		android:paddingTop = "4dp"
+		android:singleLine = "true"
+		android:textAppearance = "@style/TextAppearance.MaterialComponents.Headline6"
+		android:textColor = "@color/black"
+		app:layout_constraintEnd_toStartOf = "@+id/fab_add"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toBottomOf = "@+id/image_view"
+		tools:text = "@tools:sample/full_names" />
+
+
+	<android.support.design.chip.Chip
+		android:id = "@+id/plot_tv_holder"
+		style = "@style/Widget.MaterialComponents.Chip.Action"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "16dp"
+		android:clickable = "false"
+		android:padding = "2dp"
+		android:text = "@string/synopsis"
+		app:checkedIconEnabled = "false"
+		app:chipCornerRadius = "14dp"
+		app:chipIcon = "@drawable/twotone_scatter_plot_black_36dp"
+		app:chipIconEnabled = "true"
+		app:chipIconSize = "26dp"
+		app:chipIconTint = "@color/colorAccent"
+		app:chipStrokeColor = "@color/black"
+		app:chipStrokeWidth = "2dp"
+		app:closeIconEnabled = "false"
+		app:iconEndPadding = "6dp"
+		app:iconStartPadding = "6dp"
+		app:layout_constraintStart_toStartOf = "@id/title_tv"
+		app:layout_constraintTop_toBottomOf = "@id/title_tv" />
+
+	<TextView
+		android:id = "@+id/plot_overview"
+		android:layout_width = "0dp"
+		android:layout_height = "wrap_content"
+		android:layout_marginStart = "8dp"
+		android:layout_marginTop = "8dp"
+		android:layout_marginEnd = "16dp"
+		android:textAlignment = "center"
+		android:textAppearance = "@style/TextAppearance.MaterialComponents.Caption"
+		android:textSize = "14sp"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "@id/plot_tv_holder"
+		app:layout_constraintTop_toBottomOf = "@id/plot_tv_holder"
+		app:layout_constraintBottom_toTopOf="@id/divider2"
+		tools:text = "@string/test_text" />
+
+	<TextView
+		android:id = "@+id/release_view"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_marginStart = "16dp"
+		android:layout_marginTop = "8dp"
+		android:textAlignment = "center"
+		android:textColor = "@color/black"
+		android:textSize = "16sp"
+		app:layout_constraintBottom_toBottomOf = "@+id/genres"
+		app:layout_constraintEnd_toStartOf = "@+id/divider4"
+		app:layout_constraintStart_toStartOf = "@+id/divider2"
+		app:layout_constraintTop_toBottomOf = "@+id/chips_holder"
+		tools:text = "@string/released_date" />
+
+	<TextView
+		android:id = "@+id/rating_view"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "8dp"
+		android:layout_marginEnd = "32dp"
+		android:layout_marginBottom = "8dp"
+		android:textAlignment = "center"
+		android:textAppearance = "@style/TextAppearance.MaterialComponents.Caption"
+		android:textColor = "@color/black"
+		android:textSize = "16sp"
+		app:layout_constraintBottom_toBottomOf = "@+id/release_view"
+		app:layout_constraintEnd_toEndOf = "@+id/divider2"
+		app:layout_constraintTop_toBottomOf = "@+id/chips_holder"
+		app:layout_constraintVertical_bias = "0.0"
+		tools:text = "8/10" />
+
+
+
+	<View
+		android:id = "@+id/divider"
+		android:layout_width = "0dp"
+		android:layout_height = "1dp"
+		android:layout_marginEnd = "16dp"
+		android:background = "@color/colorPrimaryDark"
+		app:layout_constraintBottom_toBottomOf = "@+id/plot_tv_holder"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toEndOf = "@+id/plot_tv_holder"
+		app:layout_constraintTop_toTopOf = "@+id/plot_tv_holder" />
+
+	<View
+		android:id = "@+id/divider2"
+		android:layout_width = "0dp"
+		android:layout_height = "1dp"
+		android:layout_marginTop = "8dp"
+		android:layout_marginBottom="6dp"
+		android:background = "@color/black"
+		app:layout_constraintEnd_toEndOf = "@+id/chips_holder"
+		app:layout_constraintStart_toStartOf = "@+id/chips_holder"
+		app:layout_constraintTop_toBottomOf = "@+id/plot_overview" />
+
+
+	<android.support.design.chip.ChipGroup
+		android:id = "@+id/chips_holder"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "8dp"
+		app:chipSpacing = "8dp"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintHorizontal_bias = "0.49"
+		app:layout_constraintStart_toStartOf = "parent"
+		app:layout_constraintTop_toBottomOf = "@+id/divider2"
+		app:layout_optimizationLevel = "none"
+		app:singleLine = "true"
+		app:singleSelection = "false">
+
+		<android.support.design.chip.Chip
+			android:id = "@+id/release_date_holder"
+			style = "@style/Theme.MaterialComponents"
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:clickable = "false"
+			android:text = "@string/released_date"
+			app:checkedIconEnabled = "false"
+			app:chipCornerRadius = "14dp"
+			app:chipIcon = "@drawable/twotone_today_black_36dp"
+			app:chipIconEnabled = "true"
+			app:chipIconSize = "26dp"
+			app:chipIconTint = "@color/colorAccent"
+			app:chipStrokeColor = "@color/black"
+			app:chipStrokeWidth = "2dp"
+			app:closeIconEnabled = "false"
+			app:iconEndPadding = "6dp"
+			app:iconStartPadding = "6dp"
+			app:layout_constraintStart_toStartOf = "parent"
+			tools:layout_editor_absoluteY = "563dp" />
+
+		<android.support.design.chip.Chip
+			android:id = "@+id/genre_text_view"
+			style = "@style/Theme.MaterialComponents"
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:clickable = "false"
+			android:padding = "2dp"
+			android:text = "@string/genre"
+			app:checkedIconEnabled = "false"
+			app:chipCornerRadius = "14dp"
+			app:chipIcon = "@drawable/twotone_info_black_48dp"
+			app:chipIconEnabled = "true"
+			app:chipIconSize = "26dp"
+			app:chipIconTint = "@color/colorAccent"
+			app:chipStrokeColor = "@color/black"
+			app:chipStrokeWidth = "2dp"
+			app:closeIconEnabled = "false"
+			app:iconStartPadding = "6dp"
+			app:layout_constraintEnd_toEndOf = "parent"
+			tools:layout_editor_absoluteY = "563dp" />
+
+		<android.support.design.chip.Chip
+			android:id = "@+id/ratings_holder"
+			style = "@style/Theme.MaterialComponents"
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:clickable = "false"
+			android:text = "@string/rating"
+			app:checkedIconEnabled = "false"
+			app:chipCornerRadius = "14dp"
+			app:chipIcon = "@drawable/twotone_thumbs_up_down_black_36dp"
+			app:chipIconEnabled = "true"
+			app:chipIconSize = "26dp"
+			app:chipIconTint = "@color/colorAccent"
+			app:chipStrokeColor = "@color/black"
+			app:chipStrokeWidth = "2dp"
+			app:closeIconEnabled = "false"
+			app:iconEndPadding = "6dp"
+			app:iconStartPadding = "6dp"
+			app:layout_constraintEnd_toStartOf = "@+id/genre_text_view"
+			app:layout_constraintStart_toEndOf = "@+id/release_date_holder"
+			tools:layout_editor_absoluteY = "563dp" />
+	</android.support.design.chip.ChipGroup>
+
+	<TextView
+		android:id = "@+id/genres"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_marginEnd = "16dp"
+		android:textAlignment = "center"
+		android:textAppearance = "@style/TextAppearance.MaterialComponents.Caption"
+		android:textColor = "@color/black"
+		android:textSize = "16sp"
+		app:autoSizeTextType = "uniform"
+		app:layout_constraintBaseline_toBaselineOf = "@+id/rating_view"
+		app:layout_constraintEnd_toStartOf = "@+id/rating_view"
+		app:layout_constraintStart_toEndOf = "@+id/release_view"
+		tools:text = "Horror / New" />
+
+	<android.support.design.chip.Chip
+		android:id = "@+id/tv_review_holder"
+		style = "@style/Theme.MaterialComponents"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_marginTop = "16dp"
+		android:layout_marginEnd = "8dp"
+		android:clickable = "false"
+		android:padding = "2dp"
+		android:text = "@string/review_tv"
+		app:checkedIconEnabled = "false"
+		app:chipCornerRadius = "14dp"
+		app:chipIcon = "@drawable/twotone_rate_review_black_36dp"
+		app:chipIconEnabled = "true"
+		app:chipIconSize = "26dp"
+		app:chipIconTint = "@color/colorAccent"
+		app:chipStrokeColor = "@color/black"
+		app:chipStrokeWidth = "2dp"
+		app:closeIconEnabled = "false"
+		app:iconEndPadding = "6dp"
+		app:iconStartPadding = "6dp"
+		app:layout_constraintEnd_toStartOf = "@+id/divider"
+		app:layout_constraintStart_toStartOf = "@+id/plot_tv_holder"
+		app:layout_constraintTop_toBottomOf = "@id/release_view" />
+
+	<View
+		android:id = "@+id/divider4"
+		android:layout_width = "0dp"
+		android:layout_height = "1dp"
+		android:layout_marginEnd = "16dp"
+		android:background = "@color/colorPrimaryDark"
+		app:layout_constraintBottom_toBottomOf = "@+id/tv_review_holder"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toEndOf = "@+id/tv_review_holder"
+		app:layout_constraintTop_toTopOf = "@+id/tv_review_holder" />
+
+
+	<ScrollView
+		android:id="@+id/review_scroll"
+		android:layout_width = "match_parent"
+		android:layout_height = "wrap_content"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/tv_review_holder"
+		app:layout_constraintBottom_toTopOf="@id/tv_trailer_holder"
+		android:layout_marginTop="8dp"
+		android:layout_marginStart="12dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="8dp" >
+
+		<android.support.v7.widget.RecyclerView
+			android:id = "@+id/rv_reviews"
+			android:layout_width = "match_parent"
+			android:layout_height = "wrap_content"
+			android:clipToPadding = "false"
+			android:scrollbarStyle = "insideInset"
+			android:scrollbars = "vertical"
+			app:layoutManager = "android.support.v7.widget.LinearLayoutManager"
+			tools:itemCount = "1"
+			tools:listitem = "@layout/review_items" />
+	</ScrollView>
+
+	<android.support.design.chip.Chip
+			android:id = "@+id/tv_trailer_holder"
+			style = "@style/Theme.MaterialComponents"
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:layout_marginTop = "16dp"
+			android:layout_marginEnd = "8dp"
+			android:clickable = "false"
+			android:padding = "2dp"
+			android:text = "@string/trailers"
+			app:checkedIconEnabled = "false"
+			app:chipCornerRadius = "14dp"
+			app:chipIcon = "@drawable/twotone_local_movies_black_36dp"
+			app:chipIconEnabled = "true"
+			app:chipIconSize = "26dp"
+			app:chipIconTint = "@color/colorAccent"
+			app:chipStrokeColor = "@color/black"
+			app:chipStrokeWidth = "2dp"
+			app:closeIconEnabled = "false"
+			app:iconEndPadding = "6dp"
+			app:iconStartPadding = "6dp"
+			app:layout_constraintEnd_toStartOf = "@+id/divider"
+			app:layout_constraintStart_toStartOf = "@+id/plot_tv_holder"
+			app:layout_constraintTop_toBottomOf = "@id/review_scroll" />
+
+		<View
+			android:id = "@+id/divider5"
+			android:layout_width = "0dp"
+			android:layout_height = "1dp"
+			android:layout_marginEnd = "16dp"
+			android:background = "@color/colorPrimaryDark"
+			app:layout_constraintBottom_toBottomOf = "@+id/tv_trailer_holder"
+			app:layout_constraintEnd_toEndOf = "parent"
+			app:layout_constraintStart_toEndOf = "@+id/tv_trailer_holder"
+			app:layout_constraintTop_toTopOf = "@+id/tv_trailer_holder" />
+
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/trailer_rv"
+		android:layout_width = "match_parent"
+		android:layout_height = "100dp"
+		app:layout_constraintTop_toBottomOf="@id/tv_trailer_holder"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="@id/tv_trailer_holder"
+		app:layout_constraintEnd_toEndOf="parent"
+		android:layout_marginStart="32dp"
+		android:layout_marginEnd="24dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginBottom="16dp"
+		tools:listitem="@layout/trailers_item_list"
+		app:layoutManager="android.support.v7.widget.GridLayoutManager"
+		app:spanCount="2"/>
+
+</android.support.constraint.ConstraintLayout>

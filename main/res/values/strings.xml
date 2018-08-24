@@ -1,0 +1,44 @@
+<resources>
+	<string name = "app_name">Cinema files</string>
+	<string name = "popular">Popular</string>
+	<string name = "top_rated">Top Rated</string>
+	<string name = "missing_api">If you want to see the movies, you will need an API key!</string>
+	<string name = "title">Title</string>
+	<string name = "overview">Synopsis</string>
+	<string name = "ratings">Rating</string>
+	<string name = "released">Released</string>
+	<string name = "synopsis">Synopsis</string>
+	<string name = "rating">Ratings</string>
+	<string name = "released_date">Released</string>
+	<string name = "credits">Credits</string>
+
+		<string name = "refresh">Refresh</string>
+		<string name = "bad_title">Error</string>
+		<string name = "bad_response">We cannot seem to reach the internet at this time lets
+			refresh!</string>
+		<string name = "error">You need and internet connection to view, try refreshing !</string>
+		<string name = "test_text"> If you add opposing constraints on a view, the constraint lines
+		become squiggly like a spring to indicate the opposing forces, as shown in video 2. The
+		effect is most visible when the view size is set to or in which case the view is centered
+		between the constraints. If you instead want the view to stretch its size to meet the
+		constraints, switch the size to match constraints; or if you want to keep the current size
+			but move the view so that it is not centered, adjust the constraint bias </string>
+		<string name = "now_playing">Now Playing</string>
+		<string name = "favorites">Favorites</string>
+		<string name = "upcoming_movies">Upcoming</string>
+		<string name = "runtime">Popularity</string>
+		<string name = "popularity_holder">Popularity</string>
+		<string name = "genre">Category</string>
+		<string name = "share_movie">Share Movie</string>
+		<string name = "review_tv">Reviews</string>
+		<string name = "reviews_test">This movies is horrible it started out so boring so
+			badly, people in the theatre stunk, and the plot to the movie was something
+			nobody could really even get into!</string>
+
+		<!-- TODO: Remove or change this placeholder text -->
+		<string name = "hello_blank_fragment">Hello blank fragment</string>
+		<string name = "settings">Settings</string>
+		<string name = "image_load_error">Image not loaded</string>
+	<string name = "source">Source:</string>
+	<string name = "trailers">Trailers</string>
+</resources>
